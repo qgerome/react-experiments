@@ -4,6 +4,9 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "moment": true
+  },
   "plugins": [
     "react"
   ],
@@ -11,13 +14,13 @@
     "camelcase": [2, {
       "properties": "always"
     }],
-    "comma-spacing": [2, {
-      "before": false, "after": true
-    }],
-    "comma-style": [2, "last"],
+//    "comma-spacing": [2, {
+//      "before": false, "after": true
+//    }],
+//    "comma-style": [2, "last"],
     "eol-last": 2,
     "eqeqeq": 2,
-    "indent": [2, 2],
+//    "indent": [2, 2],
     "key-spacing": [2, {
       "beforeColon": false,
       "afterColon": true
@@ -43,6 +46,8 @@
       "before": false,
       "after": true
     }],
+    "spaced-comment": 0,
+    "spaced-line-comment": 0,
     "space-after-keywords": [2, "always"],
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [2, {
@@ -51,11 +56,10 @@
     }],
     "space-infix-ops": 2,
     "space-in-parens": [2, "never"],
-    "spaced-line-comment": [2, "always"],
     "space-unary-ops": [2, {
       "words": true,
       "nonwords": false
     }],
-    "react/jsx-uses-react": 1
+    "react/jsx-uses-react": 1,
   }
 }
