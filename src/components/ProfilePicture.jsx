@@ -10,7 +10,7 @@ class ProfilePicture extends React.Component {
   render() {
     const href = `${Config.apiHost}/api/tile/thumbnail/${this.props.expert.profile_id}?tclass=people&fallback=false`;
     return (
-      <img src={href}></img>
+      <img className={this.props.className} src={href}></img>
     );
   }
 }

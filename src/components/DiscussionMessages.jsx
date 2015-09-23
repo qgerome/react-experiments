@@ -2,6 +2,7 @@
 
 import React from 'react';
 import MessagesStore from '../stores/MessagesStore.jsx';
+import DiscussionActions from '../actions/DiscussionActions';
 import Message from './Message.jsx';
 
 export default class Messages extends React.Component {
@@ -11,6 +12,7 @@ export default class Messages extends React.Component {
       messages: []
     };
     MessagesStore.listen(this.onStateChange.bind(this));
+    DiscussionActions.getMessages(this.props.discussion.id);
   }
   onStateChange(state) {
     this.setState(state);
@@ -23,7 +25,7 @@ export default class Messages extends React.Component {
           <h5>Messages</h5>
           <ul>
           { messages.map(message => {
-            return <li><Message message={message}></Message></li>;
+            return <li><Message key={message.id} message={message}></Message></li>;
           })}
           </ul>
         </div>

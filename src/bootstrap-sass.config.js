@@ -19,5 +19,6 @@ module.exports = {
     grid: true,
     forms: true,
     type: true,
+    popovers: true
   },
 };

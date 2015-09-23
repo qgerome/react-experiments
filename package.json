@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "babel-node -- ./node_modules/.bin/webpack --progress",
-    "start": "babel-node -- ./node_modules/.bin/webpack-dev-server --progress --hot --log_all"
+    "start": "babel-node -- ./node_modules/.bin/webpack-dev-server --progress --log_all"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "jquery": "^2.1.4",
     "moment": "^2.10.6",
     "react": "^0.13.3",
+    "react-bootstrap": "^0.25.2",
     "url-loader": "^0.5.6",
     "whatwg-fetch": "^0.9.0"
   }

@@ -1,26 +1,25 @@
 'use strict';
 
 import React from 'react';
-import Reflux from 'reflux';
-import DiscussionStore from '../stores/DiscussionStore.jsx';
 import DiscussionActions from '../actions/DiscussionActions';
+import ProfilePicture from './ProfilePicture.jsx';
 
-export default React.createClass({
-  mixins: [Reflux.connect(DiscussionStore)],
-  selectDiscussion: function () {
+export default class DiscussionCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.selectDiscussion = this.selectDiscussion.bind(this);
+  }
+
+  selectDiscussion() {
       DiscussionActions.selectDiscussion(this.props.discussion);
-  },
-  render: function () {
-    const discussion = this.props.discussion;
+  }
 
+  render() {
+    const discussion = this.props.discussion;
     return (
-        <div className="discussion-card">
-          <ul className="recipients" onClick={this.selectDiscussion}>
-              {discussion.last_recipients.map(recipient =>
-                <li>{recipient.name}</li>
-              )}
-          </ul>
+        <div ref="card" className="discussion-card">
+          <ProfilePicture className="profile-picture" expert={discussion.last_message.expert} />
         </div>
     );
   }
-});
+}

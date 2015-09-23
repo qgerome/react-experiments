@@ -1,2 +1,10 @@
 @import '../components/DiscussionCard';
 @import '../components/DiscussionMessages';
+@import '../components/DiscussionList';
+
+.messenger {
+  position:fixed;
+  right: 30px;
+  bottom: 10px;
+  z-index:100;
+}
